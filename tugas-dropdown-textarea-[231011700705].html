@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Calistoga&family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&family=Questrial&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Umpan Balik Pelanggan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f7f9fc; /* Warna latar belakang yang lembut */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            background-color: white; /* Warna latar belakang form */
+            padding: 30px;
+            border-radius: 10px; /* Sudut melengkung pada form */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan pada form */
+            max-width: 600px; /* Lebar maksimum form */
+            margin: auto; /* Memusatkan form */
+            margin-top: 50px; /* Spasi atas */
+        }
+
+        h2 {
+            text-align: center; /* Memusatkan judul */
+            color: #3498db; /* Warna judul */
+            font-family: 'Calistoga';
+            margin-bottom: 30px; /* Spasi bawah judul */
+        }
+
+        label {
+            font-weight: bold; /* Menebalkan teks label */
+        }
+
+        button {
+            background-color: #3498db; /* Warna tombol */
+            color: white;
+            border: none; /* Menghilangkan border tombol */
+            border-radius: 5px; /* Sudut melengkung pada tombol */
+            transition: background-color 0.3s, transform 0.3s; /* Transisi untuk hover */
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Warna saat hover */
+            transform: translateY(-2px); /* Efek angkat saat hover */
+        }
+
+        textarea {
+            resize: none; /* Menonaktifkan resizing textarea */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Formulir Umpan Balik Pelanggan</h2>
+            <form action="/submit_feedback" method="POST">
+                <div class="form-group">
+                    <label for="topik">Pilih Topik Feedback:</label>
+                    <select class="form-control" id="topik" name="topik">
+                        <option value="pelayanan">Pelayanan</option>
+                        <option value="produk">Produk</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Detail Feedback:</label>
+                    <textarea class="form-control" id="feedback" name="feedback" rows="5" placeholder="Masukkan detail umpan balik Anda..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Kirim Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

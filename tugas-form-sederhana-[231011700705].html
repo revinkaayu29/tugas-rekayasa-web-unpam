@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Form Pendaftaran Newsletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('laut.jpg'); /* Ganti dengan path lokal gambar */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Mengatur warna teks menjadi putih untuk kontras yang lebih baik */
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Warna latar belakang semi-transparan untuk form */
+            padding: 30px;
+            border-radius: 15px; /* Membuat sudut lebih halus */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Memberikan efek bayangan pada form */
+        }
+
+        h2 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efek bayangan pada teks judul */
+        }
+
+        .btn-primary {
+            transition: background-color 0.3s; /* Transisi untuk efek hover */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2 class="text-center">Pendaftaran Newsletter</h2>
+            <form action="/submit_newsletter" method="POST" class="mt-4">
+                <!-- Field Nama -->
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+                <!-- Field Email -->
+                <div class="form-group">
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda" required>
+                </div>
+                <!-- Tombol Submit -->
+                <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

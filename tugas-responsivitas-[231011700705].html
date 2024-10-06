@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Calistoga&family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&display=swap" rel="stylesheet">
+</head><link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&display=swap" rel="stylesheet">
+</head><link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&display=swap" rel="stylesheet">
+</head><link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Calistoga&family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&display=swap" rel="stylesheet">
+</head><link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Calistoga&family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&family=Questrial&display=swap" rel="stylesheet">
+>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Responsive Bootstrap Website</title>
+</head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar-brand {
+            font-family: 'Calistoga', cursive;
+            font-size: 2em;
+            color: #ff6347; /* Warna yang mencolok untuk menonjolkan teks */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1);
+            color: #e55342; /* Warna berubah saat hover */
+        }
+        .about-container {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-img {
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    color: #ff6347;
+    font-family: 'Noto Serif Display', cursive; /* Font yang lebih dekoratif */
+    font-size: 3em;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #ff6347;
+    left: 0;
+    bottom: 0;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #333;
+    font-family: 'Questrial';
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.about-content i {
+    color: #ff6347;
+    margin-right: 10px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bb6969;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            font-family: 'Andika';
+        }
+
+        .card-title {
+            color: #6b3131;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: 'Agbalumo';
+        }
+
+        .card-price {
+            color: #ff6347;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-family: ;
+        }
+
+        .button {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e55342;
+        }
+    </style>
+    <title>Responsive Bootstrap Website</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="FLOW.png" width="70" height="70" class="d-inline-block align-middle" alt="Logo">
+            ANGGREK COLLECTION
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5 about-container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="siram.jpg" class="img-fluid about-img" alt="Main Image">
+            </div>
+            <div class="col-md-6 about-content">
+                <h2><i class="fas fa-seedling"></i> Tentang Kami</h2>
+                <p>Kami adalah toko online yang menyediakan berbagai jenis anggrek berkualitas tinggi. Misi kami adalah memberikan keindahan dan kebahagiaan melalui bunga anggrek yang indah kepada setiap pelanggan.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Galeri -->
+    <div class="container">
+        <div class="card">
+            <img src="anggrek1.jpg" alt="Produk 1">
+            <div class="card-body">
+                <div class="card-title">Anggrek Tebu</div>
+                <div class="card-body">Anggrek Tebu, dengan nama ilmiah Grammatophyllum speciosum, adalah salah satu anggrek terbesar di dunia, dan dikenal dengan nama lain Giant Orchid atau Queen of Orchids. Anggrek ini berasal dari wilayah Asia Tenggara, termasuk Indonesia, Malaysia, dan Filipina, dan dapat ditemukan di hutan tropis</div>
+                <button class="button">Beli Sekarang</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="anggrek2.jpg" alt="Produk 2">
+            <div class="card-body">
+                <div class="card-title">Anggrek Phalaenopsis</div>
+                <div class="card-body">Anggrek Phalaenopsis adalah jenis anggrek yang populer dan dikenal dengan nama lain "Anggrek Bulan". Anggrek ini berasal dari kawasan tropis Asia Tenggara, termasuk Indonesia, Malaysia, dan Filipina  Anggrek ini terkenal karena bentuk bunganya yang menyerupai sayap kupu-kupu, sehingga sering disebut juga "Moth Orchid" dalam bahasa Inggris..</div>
+                <button class="button">Beli Sekarang</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="anggrek.jpg" alt="Produk 3">
+            <div class="card-body">
+                <div class="card-title">Anggrek Dendrobium</div>
+                <div class="card-body">Anggrek Dendrobium adalah salah satu jenis anggrek yang populer dan beragam, berasal dari kawasan tropis Asia, seperti India, China, dan banyak negara di Asia Tenggara, termasuk Indonesia.Anggrek Dendrobium sering ditemukan di berbagai habitat, dari dataran rendah tropis hingga daerah pegunungan yang lebih dingin.</div>
+                <button class="button">Beli Sekarang</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="anggrek4.jpg" alt="Produk 4">
+            <div class="card-body">
+                <div class="card-title">Anggrek Radiata</div>
+                <div class="card-body">Anggrek Radiata, atau yang dikenal dengan nama ilmiah Habenaria radiata, adalah jenis anggrek darat yang unik dan sangat cantik. Anggrek Radiata berasal dari Jepang, Korea, dan beberapa bagian dari Asia Timur, dan tumbuh di daerah dengan kelembaban tinggi Ukuran bunganya kecil, biasanya sekitar 4 cm, tetapi sangat menawan dengan detail yang rumit.</div>
+                <button class="button">Beli Sekarang</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="anggrek5.jpg" alt="Produk 5">
+            <div class="card-body">
+                <div class="card-title">Anggrek Emas Kinablu</div>
+                <div class="card-body">Anggrek Emas Kinabalu, atau yang dikenal dengan nama ilmiah Rothschild's Slipper Orchid (Paphiopedilum rothschildianum), adalah salah satu jenis anggrek yang sangat langka dan berharga. Anggrek ini berasal dari kawasan Gunung Kinabalu di Sabah, Malaysia. Bunga ini juga terkenal karena ukurannya yang cukup besar, dengan kelopak yang lebar dan bersegi.</div>
+                <button class="button">Beli Sekarang</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="anggrek6.jpg" alt="Produk 6">
+            <div class="card-body">
+                <div class="card-title">Anggrek Hitam</div>
+                <div class="card-body">Anggrek Hitam, dengan nama ilmiah Coelogyne pandurata, adalah salah satu spesies anggrek yang langka dan eksotis, dikenal karena keunikannya. Anggrek ini berasal dari kawasan Kalimantan, Sumatra, dan Semenanjung Malaysia. Aroma bunganya kuat dan manis, biasanya mekar antara bulan Maret hingga Juni.</div>
+                <button class="button">Beli Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Produk berhasil ditambahkan ke keranjang!');
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <p>Contact us: revinkaayu@gmail.com | +6285 6910 31544</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@pop

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Calistoga&family=Lilita+One&family=Lobster&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Protest+Strike&family=Questrial&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Form Registrasi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #c6e9c6; /* Warna latar belakang yang lembut */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            background-color: rgb(248, 248, 248); /* Warna latar belakang form */
+            padding: 30px;
+            border-radius: 10px; /* Sudut melengkung pada form */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan pada form */
+            max-width: 500px; /* Lebar maksimum form */
+            margin: auto; /* Memusatkan form */
+            margin-top: 100px; /* Spasi atas */
+        }
+
+        h2 {
+            text-align: center; /* Memusatkan judul */
+            color: #1c1d1f; /* Warna judul */
+            font-family: 'Calistoga';
+            margin-bottom: 35px; /* Spasi bawah judul */
+        }
+
+        label {
+            font-weight: bold; /* Menebalkan teks label */
+        }
+
+        button {
+            background-color: #007bff; /* Warna tombol */
+            color: white;
+            border: none; /* Menghilangkan border tombol */
+            border-radius: 5px; /* Sudut melengkung pada tombol */
+            transition: background-color 0.3s, transform 0.3s; /* Transisi untuk hover */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Warna saat hover */
+            transform: translateY(-2px); /* Efek angkat saat hover */
+        }
+
+        .invalid-feedback {
+            display: none; /* Sembunyikan pesan validasi awal */
+        }
+
+        input:invalid ~ .invalid-feedback {
+            display: block; /* Tampilkan pesan validasi saat tidak valid */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Form Registrasi</h2>
+            <form action="/register" method="POST" class="mt-4">
+                <!-- Nama Lengkap -->
+                <div class="form-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" required>
+                    <div class="invalid-feedback">Nama lengkap tidak boleh kosong.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Harap masukkan alamat email yang valid.</div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required minlength="8">
+                    <div class="invalid-feedback">Password harus minimal 8 karakter.</div>
+                </div>
+
+                <!-- Konfirmasi Password -->
+                <div class="form-group">
+                    <label for="confirm-password">Konfirmasi Password</label>
+                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" required minlength="8">
+                    <div class="invalid-feedback">Konfirmasi password harus sama dengan password.</div>
+                </div>
+
+                <!-- Tombol Submit -->
+                <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Validasi Konfirmasi Password
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault(); // Menghentikan pengiriman form
+                alert('Password dan Konfirmasi Password tidak cocok.');
+                document.getElementById('confirm-password').classList.add('is-invalid'); // Tandai konfirmasi password invalid
+            } else {
+                document.getElementById('confirm-password').classList.remove('is-invalid'); // Hilangkan tanda invalid jika valid
+            }
+        });
+    </script>
+</body>
+
+</html>
